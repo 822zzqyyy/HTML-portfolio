@@ -1,0 +1,48 @@
+#image img {
+    width: 200px;
+    height: 200px;
+}
+
+  /* Page structure */
+
+
+  #blogPoem {
+    margin: 0!important;
+    background-color: #243B2B!important;
+  }
+
+  h1 {
+    color: #3B2434;
+  }
+
+  h3 > p {
+    color: #f4e8ce;
+  }
+
+  .icon-link {
+    color: #3B2434;
+  }
+
+  #dubai {
+    color:#3B2434!important;
+    background-image: url("https://cdn.glitch.global/3d43383c-3e24-48ef-8ec0-3721cacc36f9/21697423675_.pic_hd.jpg?v=1697423823116");
+    background-size: cover;
+
+  }
+  .dubai {
+    background-color: rgba(244, 231, 205, 0.6);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .introductionDubai {
+    color: rgb(182, 154, 14);
+  }
+
+  .slide {
+    height: 409px;
+    width: 307px;
+    margin-bottom: 30px;
+  }

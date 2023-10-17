@@ -1,0 +1,12 @@
+/* 
+    Include this file after style.css in your index.html
+*/
+
+#map {
+    display: block; /* make sure a box shows up */
+    height: 400px;  /* Required to let the map load in at all */
+    width: 100%;
+    min-width: 200px;/* Map will be very small without this*/
+    margin-bottom: 1rem;  /* Keep spacing below map to other boxes */
+  }
+  

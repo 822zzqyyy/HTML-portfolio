@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tony's Project 1</title>
+    <link rel="icon" href="https://cdn.glitch.global/3d43383c-3e24-48ef-8ec0-3721cacc36f9/bitbug_favicon.ico?v=1697427180958" />
+
+    <!-- CSS Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""/>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./framework.css" />
+    <link rel="stylesheet" href="./mapstyle.css" />
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin="">
+    </script>
+  </head>
+  <body>
+    <nav class="navbar nav-pills justify-content-center">
+      <div class = "nav">
+        <div class = "navControl">
+          <a class="nav-link" href="#">
+            <img class="bi" width="30" height="30" src="https://cdn.glitch.global/3d43383c-3e24-48ef-8ec0-3721cacc36f9/7d0c0767994d5864b2a42f6c189b6a31.jpg?v=1697427343466"/>
+          </a>
+          <a class="nav-link icon" onclick="myFunction()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+          </a>
+        </div>
+        <a class = "nav-link column" href="#">Home</a>
+        <a class = "nav-link column active" href="#">Portfolios</a>
+        <a class = "nav-link column" href="https://massive-heavy-reindeer.glitch.me/">Tour Blogs</a>
+        <a class = "nav-link column" href="#">About Me</a>
+        <a class = "nav-link column" href="#">Contact</a>
+      </div>
+    </nav>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Tony's Restaurant</h1>
+      </header>
+      <!-- wrapper -->
+      <div class="container">
+        <!-- container -->
+        <div class="left_section box">
+          <!-- left inputs -->
+          <h2>Form Inputs</h2>
+          <form action="/api" class="box main_form">
+            <div>
+              <label for="resto">Filter By Restaurant Name</label>
+              <input type="text" name="resto" id="resto">
+            </div>
+            <button type="submit">Change List</button>
+            <!-- This looks empty but is a load animation! -->
+            <div class="lds-ellipsis">
+              <img class = "Hotpot"src= "https://cdn.glitch.global/3d43383c-3e24-48ef-8ec0-3721cacc36f9/food.jpg?v=1694448123332" alt="Hotpot" />
+            <div></div><div></div><div></div><div></div></div>
+          </form>
+        </div>
+        <div class="right_section box">
+          <!-- right side -->
+          <!-- images box -->
+          <h2>Local Restaurant Map</h2>
+
+          <div id="map" class="box"></div>
+          <div class="box" id="restaurant_list">
+            <!-- description box -->
+            A list of restaurants from an API
+          </div>
+        </div>
+      </div>
+    </div>
+          <!-- This is about where a footer goes -->
+    <footer class = "navbar justify-content-center">
+      <div>
+        <p>Yuanyou 'Tony' Yao</p>
+      </div>
+      <div>
+        <a href ="https://www.linkedin.com/in/yuanyou-yao-050635210/"><img class = "bi" src = "https://cdn.glitch.global/3d43383c-3e24-48ef-8ec0-3721cacc36f9/In-White-128%402x.png?v=1697501502526" alt = "LinkedIn Logo Link"/></a>
+        <a href ="https://github.com/yuanyouyao"><img class = "bi" src= "https://cdn.glitch.global/3d43383c-3e24-48ef-8ec0-3721cacc36f9/github-mark-white.png?v=1697501359807" alt = "GitHub Logo Link"/></a>
+        <a href ="https://glitch.com/@yyao93"><img class = "bi" src= "https://cdn.glitch.global/3d43383c-3e24-48ef-8ec0-3721cacc36f9/images.png?v=1697500756003" alt = "Glitch Logo Link"/></a>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./script.js", charset="utf-8"></script>
+  </body>
+</html>

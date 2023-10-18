@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://cdn.glitch.global/3d43383c-3e24-48ef-8ec0-3721cacc36f9/bitbug_favicon.ico?v=1697427180958" />
+
+    <title>Tony's Project 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./framework.css" />
+  </head>
+
+  <body>
+    <nav class="navbar nav-pills justify-content-center">
+      <div class = "nav">
+        <div class = "navControl">
+          <a class="nav-link" href="#">
+            <img class="bi" width="30" height="30" src="https://cdn.glitch.global/3d43383c-3e24-48ef-8ec0-3721cacc36f9/7d0c0767994d5864b2a42f6c189b6a31.jpg?v=1697427343466"/>
+          </a>
+          <a class="nav-link icon" onclick="myFunction()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+          </a>
+        </div>
+        <a class = "nav-link column" href="#">Home</a>
+        <a class = "nav-link column active" href="#">Portfolios</a>
+        <a class = "nav-link column" href="https://massive-heavy-reindeer.glitch.me/">Tour Blogs</a>
+        <a class = "nav-link column" href="#">About Me</a>
+        <a class = "nav-link column" href="#">Contact</a>
+      </div>
+    </nav>
+    <header class = "title">
+      <h1>
+          One Dataset Shown In Four Ways
+      </h1>
+    </header>
+    <hr/>
+    <div>
+      <p>
+        This dataset allows you to view residential and commercial permits issued by DPIE (Department of Permitting, Inspections, and Enforcement) since July 1, 2013.
+      </p>
+      <p>
+        There are four graphs showing different features.
+      </p>
+    </div>
+
+    <form class = "control">
+      <input type="checkbox" id = "chart1" checked/>
+      <label for = "chart1">County Agency</label>
+
+      <input type="checkbox" id = "chart2" checked/>
+      <label for = "chart2">Permit Type</label>
+
+      <input type="checkbox" id = "chart3" checked/>
+      <label for = "chart3">City</label>
+
+      <input type="checkbox" id = "chart4" checked/>
+      <label for = "chart4">Permit Category</label>
+    </form>
+
+    <div class = "chart">
+      <div class = "upperChart">
+        <div class = "myChart chart1">
+          <canvas id="myChart1" ></canvas>
+        </div>
+        <div class = "myChart chart2">
+          <canvas id="myChart2" ></canvas>
+        </div>
+      </div>
+      <div class = "lowerChart">
+        <div class = "myChart chart3">
+          <canvas id="myChart3" ></canvas>
+        </div>
+        <div class = "myChart chart4">
+          <canvas id="myChart4" ></canvas>
+      </div>
+    </div>
+    </div>
+
+    <p>
+      According  to <a href="https://data.princegeorgescountymd.gov/Urban-Planning/Residential-and-Commercial-Permits-July-2013-to-Pr/weik-ttee">Residential and Commercial Permits</a>,
+      the dataset has originally 44870 rows.
+    </p>
+    <p>
+      Due to API restrictions, it only allows 1000 limits, meaning the total number is 1000 instances.
+    </p>
+    <p class = "source">Source code on <a href="https://glitch.com/edit/#!/bubble-peat-parenthesis">Glitch</a> and <a href="https://github.com/yaoyuanyou/UM/tree/main/INST630%20Programming%20For%20The%20Information%20Professional/Project%202">GitHub</a>.</p>
+    <!-- canvas included here -->
+    <!-- This is about where a footer goes -->
+    <footer class = "navbar justify-content-center">
+      <div>
+        <p>Yuanyou 'Tony' Yao</p>
+      </div>
+      <div>
+        <a href ="https://www.linkedin.com/in/yuanyou-yao-050635210/"><img class = "bi" src = "https://cdn.glitch.global/3d43383c-3e24-48ef-8ec0-3721cacc36f9/In-White-128%402x.png?v=1697501502526" alt = "LinkedIn Logo Link"/></a>
+        <a href ="https://github.com/yaoyuanyou"><img class = "bi" src= "https://cdn.glitch.global/3d43383c-3e24-48ef-8ec0-3721cacc36f9/github-mark-white.png?v=1697501359807" alt = "GitHub Logo Link"/></a>
+        <a href ="https://glitch.com/@yaoyuanyou"><img class = "bi" src= "https://cdn.glitch.global/3d43383c-3e24-48ef-8ec0-3721cacc36f9/images.png?v=1697500756003" alt = "Glitch Logo Link"/></a>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./script.js", charset="utf-8"></script>
+  </body>
+</html>

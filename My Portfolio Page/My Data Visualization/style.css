@@ -1,0 +1,59 @@
+html {
+    min-width: 300px;
+    font-size: 15px;
+    ;
+}
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+h1 {
+  color: #3B2434;
+    text-align: center;  
+    font-size: 3rem;
+    font-weight: 900;
+    margin-top: 15px;
+}
+
+p {
+    font-size: larger;
+    text-align: center;
+}
+
+a {
+    color: #f4e8ce;
+}
+
+.control {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.chart {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #CEDAF4;
+}
+
+.upperChart,
+.lowerChart {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.myChart {
+    width: 65vh;
+}
+
+.source {
+    font-style: italic;
+}
